@@ -1,0 +1,22 @@
+.Continue-button {
+  /* Add your otree next button styles here */
+  background-color: #007BFF;
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px;
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}

@@ -1,0 +1,33 @@
+{{ block title }}
+   Ergebnisse
+{{ endblock }}
+
+{{ block content }}
+<script type="text/javascript" src="{{ static 'js/Script_modal.js' }}"></script>
+<script type="text/javascript" src="{{ static 'js/data_quality.js' }}"></script>
+<script>  
+window.onload = function() {
+  Completion_button('{{C.Completion_redirect}}')
+};
+</script>
+
+
+<p> 
+    Results text
+    
+    <br><br>
+    If you are not automatically directed to the completion page on Prolific, use the button below.
+    Thank you for your participation!
+    
+</p>
+
+
+
+<br><br>
+<button type="button" onclick="Completion_button('{{C.Completion_redirect}}')" class="otree-btn-next btn btn-primary" id="redirectButton" class="">Complete study</button> 
+   
+
+
+{{ endblock }}
+
+

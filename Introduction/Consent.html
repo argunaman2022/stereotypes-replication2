@@ -1,0 +1,55 @@
+{{ block title }}
+    Consent Form
+{{ endblock }}
+{{ block content }}
+
+<link rel="stylesheet" href="{{static 'css/css.css'}}">
+<link rel="stylesheet" href="{{static 'css/modal.css'}}">
+<script type="text/javascript" src="{{ static 'js/Script_modal.js' }}"></script>
+<script type="text/javascript" src="{{ static 'js/data_quality.js' }}"></script>
+
+
+
+<p> 
+  Welcome and thank you for your participation in this study. This study is offered by the University of Mannheim, Germany.
+ 
+  <br><br>
+  In this study you will [PLACEHOLDER]. Your bonus earnings will depend on the choices you and others make.
+  Your responses will be treated with absolute confidentiality.
+   The data will be anonymized which implies that no conclusions about individuals can be drawn from this survey. Moreover, the responses will be used exclusively for research purposes and will not be shared with third parties. 
+  The entire study is expected to take about <strong>XXX</strong>.
+ 
+  <br><br>
+  At any point, you can quit the study using the "Quit Study" button shown below. In case  you choose to quit, you will not be rejected but asked to return the study.
+   If you want to participate in this study, use the "Next" button to proceed. 
+   <br><br>
+   Please complete this study in one sitting, undisturbed and concentrated. Please complete this study alone. 
+   <strong>We reserve the right</strong> to exclude participants from the experiment who do not complete the study carefully.
+ 
+ 
+ </p>
+
+<div class="buttons-container">
+    <a id="myBtn" onclick="open_modal(2)"  class="otree-btn-next btn btn-primary">Quit Study (Return Task)</a>
+    <button id="NextButton" class="otree-btn-next btn btn-primary">Next</button>
+</div>
+
+
+<div id="myModal2" class="modal quit-modal">
+    <div class="modal-content">
+        <div class="modal-header">
+          <h2>You are about to quit the study</h2>
+        </div>
+      <p style="padding: 2px">
+        If you choose to quit the study you will not receive any payment. <br>
+        You will not be rejected but you will not be able to participate in the study again. <br>
+        To quit the study, please press <b>OK</b>.
+        </p>
+      <div class="buttons-container">
+          <a id="myBtn" onclick="span_click(2)"  class="otree-btn-next btn btn-primary">Cancel</a>
+          <a href="{{C.Return_redirect}}" class="otree-btn-next btn btn-primary">OK</a>
+    </div>
+    </div>
+</div>
+
+{{ endblock }}

@@ -1,0 +1,55 @@
+<style>
+    .center {
+      text-align: center;
+    }
+  </style>
+  
+  
+  <div class="card bg-light m-3">
+    <div class="card-body">
+    In this study, you will play a {{Treatment}} game. You will have <b>2 minutes</b> to score as many points as you can. 
+      <br><br>
+      <h3 class="center">{{Treatment}} Game</h3>
+    <p>
+      <h5>Game</h5>You will see a box with 16 cells. 
+      Behind each cell, there is a simple addition of two one-digit numbers (e.g. 1+2) and a red or black heart. 
+      Your task is to find the matching pairs by clicking on the corresponding cells. 
+      For two cells to be a match two conditions must be met: first, the addition must be the same, and second, the hearts must be the same color. 
+      <br><br>
+
+      <h5>Scoring points</h5> Once you find a matching pair, these cells will disappear.
+       Once you find all matching pairs in one box, another box with 16 cells will appear.
+        Each pair found counts as one problem correctly solved!
+          We expect that those with stronger <b>{{Skill}} skills</b> will perform better. 
+
+      <br><br>
+      <h5>Example</h5> An example problem is depicted below. 
+      In this picture, 1+2 and 3+0 are matching pairs, since they both equal 3 and they both have a red heart.
+       Clicking on these two cells leads to a correct solution
+      <br><br>
+      
+      <div class="card bg-light m-3">
+        <div class="card-body">
+            <p style="text-align: center;"><strong>Example</strong></p>
+            <div class="task-example">
+                
+                <img src="{{C.MathMemory_pic}}" style="width: 100%; height: auto;">
+            </div>
+        </div>
+    </div>
+
+
+    </p>
+    <h3 class="center">Payment</h3>
+
+    <p> 
+
+      Your payment consists of a <strong>completion payment</strong> and a <strong>bonus payment</strong>.
+      <br>
+       Conditional on successfully completing the study, you will receive a completion payment of {{C.Completion_fee}}. 
+       In addition, you can earn a bonus payment up to {{C.Max_bonus}}. Your <strong>bonus depends on your score</strong>.
+        For each point you score you will earn a bonus of {{C.Piece_rate}}.
+         For instance, if you score {{C.Max_score}} points you can earn the bonus of {{C.Max_bonus}}$. 
+      <br><br>
+      
+    </p>

@@ -1,0 +1,29 @@
+{{ block title }}
+Attention checks not passed
+{{ endblock }}
+
+{{ block content }}
+<script type="text/javascript" src="{{ static 'js/Script_modal.js' }}"></script>
+<script type="text/javascript" src="{{ static 'js/data_quality.js' }}"></script>
+    <p> 
+      Unfortunately, you failed both attention checks. Therefore, we will discard your data and reject your submission.
+        
+        <br><br>
+        If you are not automatically directed to the completion page on Prolific, use the button below.
+        <br>
+        Thank you for your participation!  
+    </p>
+
+
+
+<button type="button" onclick="Completion_button('{{C.Failure_redirect}}')" class="otree-btn-next btn btn-primary" id="redirectButton" class="">End study</button>    
+
+<script>  
+    window.onload = function() {
+      Completion_button('{{C.Failure_redirect}}')
+    };
+</script>
+
+{{ endblock }}
+
+
