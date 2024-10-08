@@ -30,7 +30,8 @@ class C(BaseConstants):
     Return_redirect = "https://www.wikipedia.org/" #TODO:  ADJUST.  redirect
 
     #TODO: update this pic
-    MathMemory_pic = 'https://raw.githubusercontent.com/argunaman2022/stereotypes-replication/master/_static/pics/MathMemory_pic.png'
+    MathMemory_pic = 'https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/MathMemory_pic.png'
+
     
     
     
