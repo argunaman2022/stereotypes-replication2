@@ -1,5 +1,5 @@
 {{ block title }}
-Part II. Beliefs 2/2
+Part II. Rules and payment.
 {{ endblock }}
 
 {{ block content }}
@@ -8,34 +8,16 @@ Part II. Beliefs 2/2
 <script type="text/javascript" src="{{ static 'js/Script_modal.js' }}"></script>
 <script type="text/javascript" src="{{ static 'js/data_quality.js' }}"></script>
 
-    <p>
-        Below, we ask you to guess the average answer of other participants to the two questions you just answered.
-       <strong> Remember that the closer your guesses are to the truth, the higher a bonus you can earn. </strong>
-    </p>
-    
-    <br>
+
+{{ include C.Instructions_partII_path}}
 
 
-    <label for="id_FOB_Male_score">What do you think <strong>the answer of an average participant 
-    </strong> is to the question: "In the previous round, how many points do you think an average male participant scored?" ?
-    </label>
-    {{ formfield 'SOB_Male_score' }}
-    
-    <label for="id_FOB_Female_score">What do you think <strong>the answer of an average participant 
-    </strong> is to the question: "In the previous round, how many points do you think an average female participant scored?" ?
-    </label>
-    {{ formfield 'SOB_Female_score' }}
-    
+
+<p>
+    These instructions will be available at the bottom of the screen under "Instructions" button.
+</p>
 
 
-<div style="display:none">
-    {% for field in form %}
-        {% if field.name in hidden_fields %}
-            {{ formfield field.name }}
-        {% endif %}
-    {% endfor %}
-</div>
-    <br><br>
 
     <div class="buttons-container">
         <a id="myBtn" onclick="open_modal(2)"  class="otree-btn-next btn btn-primary">Quit Study (Return Task)</a>
@@ -44,6 +26,8 @@ Part II. Beliefs 2/2
     </div>
     
     
+
+
     <div id="myModal2" class="modal quit-modal">
       <div class="modal-content">
           <div class="modal-header">

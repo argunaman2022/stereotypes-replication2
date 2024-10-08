@@ -1,5 +1,5 @@
 {{ block title }}
-    Beliefs 1/2
+Part II. Beliefs 1/2
 {{ endblock }}
 
 {{ block content }}
@@ -9,15 +9,18 @@
 <script type="text/javascript" src="{{ static 'js/data_quality.js' }}"></script>
 
     <p>
-       Thank you for playing the game. 
-       Below, we ask you to guess the average scores of other participants in this study. 
+        Below, we ask you to guess the average score of other male and female participants in the {{Treatment}} game that you just played.
        <strong> Remember that the closer your guesses are to the truth, the higher a bonus you can earn. </strong>
     </p>
 
+    <br>
+
+    <label for="id_FOB_Male_score">In the {{Treatment}} game, how many points do you think <strong>an average man</strong> scored?</label>
     {{ formfield 'FOB_Male_score' }}
+    
+    <label for="id_FOB_Female_score">In the {{Treatment}} game, how many points do you think <strong>an average woman</strong> scored?</label>
     {{ formfield 'FOB_Female_score' }}
-
-
+    
 <div style="display:none">
     {% for field in form %}
         {% if field.name in hidden_fields %}
@@ -53,7 +56,7 @@
               <span class="close" onclick="span_click(1)">&times;</span>
             </div>
           <p style="padding: 0px">
-         {{include C.Instructions_path}}
+         {{include C.Instructions_partII_path}}
           </p>
         </div>
     </div>

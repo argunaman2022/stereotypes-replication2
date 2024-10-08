@@ -18,13 +18,14 @@ class C(BaseConstants):
     Piece_rate = 0.03 # TODO: Adjust
     Max_score = 10 #TODO: adjust
     Max_bonus = 0.5 #TODO: adjust 
-    
+            
     # Round length
     Round_length = 1200 #TODO: adjust
     Timer_text = "Time left to complete this round:"  
     
     
     Instructions_path = "_templates/global/Instructions.html"
+    Instructions_partII_path = "_templates/global/Instructions_PartII.html"
     Quit_study_text_path = "_templates/global/Quit_study_text.html"
 
     Return_redirect = "https://www.wikipedia.org/" #TODO:  ADJUST.  redirect
@@ -57,11 +58,11 @@ class Player(BasePlayer):
     Attempts_Piece_rate = models.IntegerField(initial=0) # logs the number of attempts in the math memory game
 
     # Player's beliefs
-    FOB_Male_score = models.IntegerField(min=0, max=2000, label='In the previous round, how many points do you think <strong>an average woman </strong> scored?')
-    FOB_Female_score = models.IntegerField(min=0, max=2000, label='In the previous round, how many points do you think <strong>an average man</strong> scored?')
+    FOB_Male_score = models.IntegerField(min=0, max=2000, label='')
+    FOB_Female_score = models.IntegerField(min=0, max=2000, label='')
     
-    SOB_Male_score = models.IntegerField(min=0, max=2000, label='What do you think <strong>the average answer of other participants </strong> will be to the question: "In the previous round, how many points do you think an average man scored?"?')
-    SOB_Female_score = models.IntegerField(min=0, max=2000, label='What do you think <strong>the average answer of other participants </strong> will be to the question: "In the previous round, how many points do you think an average woman scored?"?')
+    SOB_Male_score = models.IntegerField(min=0, max=2000, label='')
+    SOB_Female_score = models.IntegerField(min=0, max=2000, label='')
 
     # Whether the player clicked out of the page
     blur_event_counts = models.StringField(initial=0, blank=True) # logs how often user clicked out of the page 
@@ -108,6 +109,10 @@ class Round_1_Play(MyBasePage):
         player.participant.vars['Score'] = player.Piece_rate 
         player.participant.vars['Bonus'] = player.Piece_rate * C.Piece_rate
     
+class PartII(MyBasePage):
+    extra_fields = []
+    form_fields = MyBasePage.form_fields + extra_fields
+    
 class FOB(MyBasePage):
     extra_fields = ['FOB_Male_score', 'FOB_Female_score',]
     form_fields = MyBasePage.form_fields + extra_fields
@@ -141,6 +146,6 @@ class Attention_check_2(MyBasePage):
                 
 page_sequence = [
     Round_1_Explanation, Round_1_Play,
-    FOB, SOB,
+    PartII, FOB, SOB,
     Attention_check_2, 
     ]
