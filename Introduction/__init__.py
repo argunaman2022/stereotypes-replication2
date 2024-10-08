@@ -22,13 +22,13 @@ class C(BaseConstants):
     NUM_ROUNDS = 1
     
     # Payment infos
-    Completion_fee = 0.5 #TODO: adjust
-    Piece_rate = 0.03 # TODO: Adjust
-    Max_score = 10 #TODO: adjust
-    Max_bonus = 0.5 #TODO: adjust   
+    Completion_fee = 1.2 # adjust
+    Piece_rate = 0.03 #  Adjust #Average person had solved 16 problems in 2 minutes in a previous experiment. 16*0.03 = 0.5
+    Max_score = 80 #TODO: adjust. 10 boxes and each box has 8 scores -> 10*8 = 80
+    Max_bonus = 2.4 #TODO: adjust   80 *0.03
+    Max_bonus_beliefs = 1.2 #TODO: adjust  
     
     # picture
-    #TODO: update this pic
     MathMemory_pic = 'https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/MathMemory_pic.png'
     
     
