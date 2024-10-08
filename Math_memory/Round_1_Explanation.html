@@ -1,5 +1,5 @@
 {{ block title }}
-    {{Treatment}} game. Start game?
+    Part I. {{Treatment}} game: payment rules.
 {{ endblock }}
 
 {{ block content }}
@@ -10,10 +10,20 @@
 
 
 <p>
-    You will have <b>2 minutes</b> to score as many points as you can. Remember that your bonus payment depends on your score.
+    In the next page, you will play the {{Treatment}} game.
+    <ul>
+        <li>    
+            <strong>Time limit.</strong> You will have <strong>2 minutes</strong> to score as many points as you can. 
+            <strong>Please do not refresh your browser. Doing so will not stop the timer but will reset your score.</strong>
+        </li>
+        <li>    
+            <strong>Your bonus.</strong> If the computer chooses randomly this part to determine your bonus, then for each point you score, you will earn {{C.Piece_rate}}$.
+            Maximum points you can score is {{C.Max_score}}.
+            This means, if you get the maximum score, your bonus will be {{C.Max_bonus}}$.
+        </li>
+    </ul>
 
-    If you are ready to start, press "Next" button to start the game.
-    </div>
+    Once you are ready to start, press "Next" button to start the game.
 </p>
 
 

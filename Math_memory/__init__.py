@@ -20,7 +20,7 @@ class C(BaseConstants):
     Max_bonus = 0.5 #TODO: adjust 
     
     # Round length
-    Round_length = 3600 #TODO: adjust
+    Round_length = 1200 #TODO: adjust
     Timer_text = "Time left to complete this round:"  
     
     
@@ -45,21 +45,23 @@ class Player(BasePlayer):
     bonus_payoff = models.FloatField(initial=0)
   
     # Attention check 2, 1 was in introduction 
-    Attention_2 = models.BooleanField(choices=[
-            [True, 'I disagree.'],
-            [False, 'I think both are possible.'],
-            [False, 'I agree.'],], 
-        label= 'A 20 year old man can eat 500kg meat and 2 tons of vegetables in one meal.', widget=widgets.RadioSelect)
+    Attention_2_question = models.StringField(label='What number will you input here?', blank=True)
+    Attention_2 = models.IntegerField(initial=1, )
             
     # Player answers
     # Scores and trials from each game. There are 6 games but each player plays only 2. See treatment for the order.
     ## First game
     Piece_rate = models.IntegerField(initial=0) #correct answers
-
-
     ## Extra fields for certain tasks
     Attempts_Piece_rate = models.IntegerField(initial=0) # logs the number of attempts in the math memory game
+
+    # Player's beliefs
+    FOB_Male_score = models.IntegerField(min=0, max=2000, label='In the previous round, how many points do you think <strong>an average woman </strong> scored?')
+    FOB_Female_score = models.IntegerField(min=0, max=2000, label='In the previous round, how many points do you think <strong>an average man</strong> scored?')
     
+    SOB_Male_score = models.IntegerField(min=0, max=2000, label='What do you think <strong>the average answer of other participants </strong> will be to the question: "In the previous round, how many points do you think an average man scored?"?')
+    SOB_Female_score = models.IntegerField(min=0, max=2000, label='What do you think <strong>the average answer of other participants </strong> will be to the question: "In the previous round, how many points do you think an average woman scored?"?')
+
     # Whether the player clicked out of the page
     blur_event_counts = models.StringField(initial=0, blank=True) # logs how often user clicked out of the page 
  
@@ -100,21 +102,44 @@ class Round_1_Play(MyBasePage):
     timeout_seconds = C.Round_length
     timer_text = C.Timer_text
     
-
+    @staticmethod
+    def before_next_page(player: Player, timeout_happened):
+        player.participant.vars['Score'] = player.Piece_rate 
+        player.participant.vars['Bonus'] = player.Piece_rate * C.Piece_rate
+    
+class FOB(MyBasePage):
+    extra_fields = ['FOB_Male_score', 'FOB_Female_score',]
+    form_fields = MyBasePage.form_fields + extra_fields
+    #TODO: adjust bonus based on score here
+    
+class SOB(MyBasePage):
+    extra_fields = ['SOB_Male_score', 'SOB_Female_score',]
+    form_fields = MyBasePage.form_fields + extra_fields
+    #TODO: adjust bonus based on score here
+    
 
 class Attention_check_2(MyBasePage):         
-    extra_fields = ['Attention_2']
+    extra_fields = ['Attention_2_question', ]
     form_fields = MyBasePage.form_fields + extra_fields
     
+    @staticmethod
     def before_next_page(player: Player, timeout_happened=False):
-        if (not player.Attention_2 and not player.participant.vars['Attention_1']):
+        if player.Attention_2_question != '1234':
+            player.Attention_2 = 0
+        else: 
+            player.Attention_2 = 1
+        if (not player.Attention_2==1 and not player.participant.vars['Attention_1']):
             player.participant.vars['Allowed'] = False
             player.participant.vars['Attention_passed'] = False
 
-
-
+    @staticmethod
+    def vars_for_template(player: Player):
+        variables = MyBasePage.vars_for_template(player)
+        variables['hidden_fields'].append('Attention_2_question')
+        return variables
                 
 page_sequence = [
     Round_1_Explanation, Round_1_Play,
-    Attention_check_2,
+    FOB, SOB,
+    Attention_check_2, 
     ]

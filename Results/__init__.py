@@ -57,6 +57,12 @@ class Results(Page):
         print(player.participant.vars)
         return player.participant.Allowed and player.participant.Comprehension_passed and player.participant.Attention_passed
 
+    @staticmethod   
+    def vars_for_template(player: Player):
+        variables = MyBasePage.vars_for_template(player)
+        variables['Score'] = player.participant.Score
+        variables['Bonus'] = player.participant.Bonus
+        return variables
 
 class Failed_screening(MyBasePage):
     'This page is displayed if the player failed the comprehension checks'

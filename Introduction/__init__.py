@@ -92,22 +92,16 @@ class Player(BasePlayer):
     Comprehension_2 = models.BooleanField(initial=True) 
     
     Comprehension_question_1 = models.BooleanField(choices=[
-            [True,'Correct answer'], # Correct answer here
-            [False, 'False answer'],
-            [False, 'False answer'],],
-        label = 'Comprehension question 1',
+            [False,'My bonus does not depend on how well I do in the game.'], # Correct answer here
+            [False, 'To maximize my bonus, I must solve the game as quickly as I can.'],
+            [True, 'To maximize my bonus, I must find as many matching pairs as I can in the game.'],],
+        label = '<strong>Bonus</strong>. Which of the following is correct?',
         widget=widgets.RadioSelect)
     Comprehension_question_2 = models.BooleanField(choices=[
-            [True,'Correct answer'], 
-            [False, 'False answer'],
-            [False, 'False answer'],],
-        label = 'Comprehension question 1',
-        widget=widgets.RadioSelect)
-    Comprehension_question_3 = models.BooleanField(choices=[
-            [True,'Correct answer'], 
-            [False, 'False answer'],
-            [False, 'False answer'],],
-        label = 'Comprehension question 1',
+            [False,'10 minutes.'], 
+            [True, '2 minutes.'],
+            [False, 'There is no time limit and I must solve as many problems as I can.'],],
+        label = '<strong>Time limit</strong>. How much time will you have in the game?',
         widget=widgets.RadioSelect)
     
     Attention_1 = models.BooleanField(choices=[
@@ -209,12 +203,12 @@ class Instructions(MyBasePage):
     
             
 class Comprehension_check_1(MyBasePage):
-    extra_fields = ['Comprehension_question_1', 'Comprehension_question_2', 'Comprehension_question_3']
+    extra_fields = ['Comprehension_question_1', 'Comprehension_question_2',]
     form_fields = MyBasePage.form_fields + extra_fields    
 
     @staticmethod   
     def before_next_page(player: Player, timeout_happened=False):
-        player_passed_comprehension = player.Comprehension_question_1 and player.Comprehension_question_2 and player.Comprehension_question_3
+        player_passed_comprehension = player.Comprehension_question_1 and player.Comprehension_question_2
         # if player has answered a question wrong then I save it in a string
         wrong_answers = ''
         if not player.Comprehension_question_1:
@@ -224,10 +218,6 @@ class Comprehension_check_1(MyBasePage):
             if not wrong_answers =='': wrong_answers += ', '
             player.Comprehension_question_2 = None
             wrong_answers+= 'second question'
-        if not player.Comprehension_question_3:
-            if not wrong_answers =='': wrong_answers += ', '
-            player.Comprehension_question_3 = None
-            wrong_answers+= 'third question'
         
         player.Comprehension_wrong_answers = wrong_answers
         player.Comprehension_1 = player_passed_comprehension
@@ -237,7 +227,7 @@ class Comprehension_check_1(MyBasePage):
 
         
 class Comprehension_check_2(MyBasePage):
-    extra_fields = ['Comprehension_question_1', 'Comprehension_question_2', 'Comprehension_question_3']
+    extra_fields = ['Comprehension_question_1', 'Comprehension_question_2',]
     form_fields = MyBasePage.form_fields + extra_fields    
 
     @staticmethod
@@ -256,7 +246,7 @@ class Comprehension_check_2(MyBasePage):
     @staticmethod   
     def before_next_page(player: Player, timeout_happened=False):
         player_passed_comprehension = (player.Comprehension_question_1 and
-                                       player.Comprehension_question_2 and player.Comprehension_question_3)
+                                       player.Comprehension_question_2)
         #failing two compr. checks player is not allowed to continue
         player.participant.Allowed = player_passed_comprehension
         player.Comprehension_2 = player_passed_comprehension

@@ -1,5 +1,5 @@
 {{ block title }}
-    Beliefs 2/2
+    Beliefs 1/2
 {{ endblock }}
 
 {{ block content }}
@@ -9,11 +9,13 @@
 <script type="text/javascript" src="{{ static 'js/data_quality.js' }}"></script>
 
     <p>
-       Thank you for answering the previous two questions. 
-       You are nearly done with the experiment. This is the last attention check, please in the field below input "1234" to finish the study.
+       Thank you for playing the game. 
+       Below, we ask you to guess the average scores of other participants in this study. 
+       <strong> Remember that the closer your guesses are to the truth, the higher a bonus you can earn. </strong>
     </p>
 
-    {{ formfield 'Attention_2_question' }}
+    {{ formfield 'FOB_Male_score' }}
+    {{ formfield 'FOB_Female_score' }}
 
 
 <div style="display:none">

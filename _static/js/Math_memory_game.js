@@ -47,15 +47,15 @@ var ImgSource1 = [
   "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%201/7black_part_2.png",
   "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%201/7red_part_2.png",
  
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%201/9black_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%201/9red_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%201/9black_part_2.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%201/9red_part_2.png",
- 
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%201/1black4_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%201/1red4_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%201/1black4_part_2.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%201/1red4_part_2.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%201/9black_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%201/9red_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%201/9black_part_2.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%201/9red_part_2.png",
+//  
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%201/1black4_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%201/1red4_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%201/1black4_part_2.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%201/1red4_part_2.png",
 ];
 var ImgSource2 = [
   "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%202/3red_part_1.png",
@@ -78,15 +78,15 @@ var ImgSource2 = [
   "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%202/7red_part_2.png",
   "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%202/7black_part_2.png",
  
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%202/12red_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%202/12black_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%202/12red_part_2.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%202/12black_part_2.png",
- 
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%202/15red_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%202/15black_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%202/15red_part_2.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%202/15black_part_2.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%202/12red_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%202/12black_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%202/12red_part_2.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%202/12black_part_2.png",
+//  
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%202/15red_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%202/15black_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%202/15red_part_2.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%202/15black_part_2.png",
 ];
 var ImgSource3 = [
   "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%203/5red_part_1.png",
@@ -109,15 +109,15 @@ var ImgSource3 = [
   "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%203/11red_part_2.png",
   "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%203/11black_part_2.png",
  
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%203/14red_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%203/14black_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%203/14red_part_2.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%203/14black_part_2.png",
- 
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%203/16red_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%203/16black_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%203/16red_part_2.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%203/16black_part_2.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%203/14red_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%203/14black_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%203/14red_part_2.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%203/14black_part_2.png",
+//  
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%203/16red_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%203/16black_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%203/16red_part_2.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%203/16black_part_2.png",
 ];
 var ImgSource4 = [
   "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%204/6red_part_1.png",
@@ -140,15 +140,15 @@ var ImgSource4 = [
   "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%204/9red_part_2.png",
   "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%204/9black_part_2.png",
  
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%204/13red_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%204/13black_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%204/13red_part_2.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%204/13black_part_2.png",
- 
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%204/14red_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%204/14black_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%204/14red_part_2.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%204/14black_part_2.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%204/13red_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%204/13black_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%204/13red_part_2.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%204/13black_part_2.png",
+//  
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%204/14red_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%204/14black_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%204/14red_part_2.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%204/14black_part_2.png",
 ];
 var ImgSource5 = [
   "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%205/10red_part_1.png",
@@ -171,15 +171,15 @@ var ImgSource5 = [
   "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%205/16red_part_2.png",
   "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%205/16black_part_2.png",
  
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%205/5red_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%205/5black_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%205/5red_part_2.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%205/5black_part_2.png",
- 
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%205/6red_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%205/6black_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%205/6red_part_2.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%205/6black_part_2.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%205/5red_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%205/5black_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%205/5red_part_2.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%205/5black_part_2.png",
+//  
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%205/6red_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%205/6black_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%205/6red_part_2.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%205/6black_part_2.png",
 ];
 var ImgSource6 = [
   "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%206/11red_part_1.png",
@@ -202,15 +202,15 @@ var ImgSource6 = [
   "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%206/3red_part_2.png",
   "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%206/3black_part_2.png",
  
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%206/4red_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%206/4black_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%206/4red_part_2.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%206/4black_part_2.png",
- 
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%206/7red_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%206/7black_part_1.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%206/7red_part_2.png",
-  "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%206/7black_part_2.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%206/4red_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%206/4black_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%206/4red_part_2.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%206/4black_part_2.png",
+//  
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%206/7red_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%206/7black_part_1.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%206/7red_part_2.png",
+  // "https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/Math_memory_boxes/Box%206/7black_part_2.png",
 ];
 
 function isImageMatch(imgSrc1, imgSrc2) {

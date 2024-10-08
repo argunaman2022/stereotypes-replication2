@@ -7,23 +7,32 @@
   
   <div class="card bg-light m-3">
     <div class="card-body">
-    In this study, you will play a {{Treatment}} game. You will have <b>2 minutes</b> to score as many points as you can. 
-      <br><br>
+      This study consists of two parts. 
+      <ol>
+         <li>First, you will play a Memory game. You will have <strong>2 minutes</strong> to score as many points as you can in this game (explained below).</li>
+        <li> Second, you will be asked to make a guess about other people's performance (explained later). </li>
+      </ol>
+     
+      
       <h3 class="center">{{Treatment}} Game</h3>
     <p>
-      <h5>Game</h5>You will see a box with 16 cells. 
-      Behind each cell, there is a simple addition of two one-digit numbers (e.g. 1+2) and a red or black heart. 
-      Your task is to find the matching pairs by clicking on the corresponding cells. 
-      For two cells to be a match two conditions must be met: first, the addition must be the same, and second, the hearts must be the same color. 
+      In this game, you will see boxes with 16 cells. 
+      Each cell hides a simple addition of two one-digit numbers (e.g., 1+2) and a red or black heart.
+      Your task is to click on cells to find matching pairs based on the conditions below.
+     
+      For two cells to be a match two conditions must be met:
+      <ol>
+        <li> the addition must be the same </li>
+        <li> the hearts must be the same color </li>
+      </ol>
+      Each time you find a matching pair, the two cells will disappear.
+      Once you find all matching pairs in one box, another box with 16 cells will appear.
+      Each pair found counts as one problem correctly solved!
       <br><br>
-
-      <h5>Scoring points</h5> Once you find a matching pair, these cells will disappear.
-       Once you find all matching pairs in one box, another box with 16 cells will appear.
-        Each pair found counts as one problem correctly solved!
-          We expect that those with stronger <b>{{Skill}} skills</b> will perform better. 
+      Your performance might be affected by your <strong>{{Skill}} skills</strong>.
 
       <br><br>
-      <h5>Example</h5> An example problem is depicted below. 
+      <h5><strong>Example</strong></h5> An example problem is depicted below. 
       In this picture, 1+2 and 3+0 are matching pairs, since they both equal 3 and they both have a red heart.
        Clicking on these two cells leads to a correct solution
       <br><br>
@@ -46,10 +55,12 @@
 
       Your payment consists of a <strong>completion payment</strong> and a <strong>bonus payment</strong>.
       <br>
-       Conditional on successfully completing the study, you will receive a completion payment of {{C.Completion_fee}}. 
-       In addition, you can earn a bonus payment up to {{C.Max_bonus}}. Your <strong>bonus depends on your score</strong>.
-        For each point you score you will earn a bonus of {{C.Piece_rate}}.
-         For instance, if you score {{C.Max_score}} points you can earn the bonus of {{C.Max_bonus}}$. 
-      <br><br>
+      <ul>
+       <li><strong>Completion payment.</strong> If you successfully complete the study, you will receive a completion payment of {{C.Completion_fee}}. </li>
+       <li><strong>Bonus payment. </strong>In addition, you can earn a bonus payment up to {{C.Max_bonus}}.
+          Your bonus depends on your performance in the two parts. The computer will randomly select one of the two parts to determine your bonus.
+          To maximize your bonus, we recommend that you do your best in both parts. The exact details will be revealed later.
+            </li>
+      </ul> 
       
     </p>

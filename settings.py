@@ -25,7 +25,8 @@ SESSION_CONFIG_DEFAULTS = dict(
 PARTICIPANT_FIELDS = [
     'Allowed','Comprehension_passed', 'Attention_passed',
     'Covariate_categories', #this is the dictionary of covariates that we stratify over
-    'Treatment'
+    'Treatment',
+    'Score', 'Bonus'
 ]
 SESSION_FIELDS = {
                     'Male_quotas':{}, 'Female_quotas':{},
