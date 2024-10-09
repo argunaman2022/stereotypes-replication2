@@ -3,8 +3,8 @@ from os import environ
 SESSION_CONFIGS = [
     dict(name='Study',
          app_sequence=['Introduction','Math_memory', 'Results'],
-         num_demo_participants=1000, #TODO: adjust number
-         completionlink='prolific completion link!!!!!!'), #TODO: ADJUST. add the proper completion link from prolific
+         num_demo_participants=50, 
+         completionlink='https://app.prolific.com/submissions/complete?cc=C1J53ZD8'), 
 
 ]
 
@@ -16,15 +16,12 @@ SESSION_CONFIGS = [
 ROOMS = [
     dict( name = 'Survey', display_name = 'Survey'),
 ]
-
-#TODO:  ADJUST.  add use use_browser_bots=True, to test with website bots. Alternatively use otree test Study --export to test with the otree bots. Make sure to delete database first
 SESSION_CONFIG_DEFAULTS = dict(
     real_world_currency_per_point=1.00, participation_fee=0.00, doc="", use_browser_bots=False,
 )
-#TODO:  ADJUST. add the relevant participant fields if you wanna pass them thourgh apps
+
 PARTICIPANT_FIELDS = [
     'Allowed','Comprehension_passed', 'Attention_passed',
-    'Covariate_categories', #this is the dictionary of covariates that we stratify over
     'Treatment',
     'Payment_relevant_round', 'Score', 'Bonus'
 ]

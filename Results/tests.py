@@ -4,8 +4,6 @@ import random
 
 class PlayerBot(Bot):
 
-    cases = ['pass', 'fail_comprehension', 'fail_attention']
-
     def play_round(self):
         pass
 

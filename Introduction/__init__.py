@@ -24,18 +24,18 @@ class C(BaseConstants):
     # Payment infos
     Completion_fee = 1.05 # adjust
     Piece_rate = 0.05 #  Adjust #Average person had solved 16 problems in 2 minutes in a previous experiment. 16*0.03 = 0.5
-    Max_score = 40 #TODO: adjust. 5 boxes and each box has 8 scores -> 5*8 = 40
-    Max_bonus = 2 #TODO: adjust   40 *0.05
-    Max_bonus_beliefs = 2 #TODO: adjust  
+    Max_score = 40 
+    Max_bonus = 2 
+    Max_bonus_beliefs = 2 
     
     # picture
     MathMemory_pic = 'https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/MathMemory_pic.png'
     
     
     # Prolific links:
-    Completion_redirect = "https://www.wikipedia.org/" #TODO:  ADJUST.  completion redirect
-    Reject_redirect = "https://www.wikipedia.org/" #TODO:  ADJUST.  reject redirect
-    Return_redirect = "https://www.wikipedia.org/" #TODO: adj ADJUST. ust return redirect
+    Completion_redirect = "https://app.prolific.com/submissions/complete?cc=C1J53ZD8" 
+    Reject_redirect = "https://app.prolific.com/submissions/complete?cc=CSTJBDWB" 
+    Return_redirect = "https://app.prolific.com/submissions/complete?cc=C3ZWW9CZ" 
     
     Instructions_path = "_templates/global/Instructions.html"
     Quit_study_text_path = "_templates/global/Quit_study_text.html"
@@ -65,6 +65,7 @@ def creating_session(subsession):
         player.participant.Comprehension_passed = False 
         player.participant.vars['Attention_passed'] = True
         player.participant.Treatment = False
+        player.participant.Bonus = 'nan'
 
 
             
@@ -82,7 +83,7 @@ class Player(BasePlayer):
     # Data quality. 
     #browser used by the participant This variable is saved in the demographics page.
     browser = models.StringField(blank=True) 
-    # logs how often user clicked out of the page #TODO: ensure that this is added to all the new pages
+    # logs how often user clicked out of the page 
     blur_event_counts = models.StringField(initial=0, blank=True) 
     
     'Comprehension and attention checks'
@@ -183,7 +184,6 @@ class MyBasePage(Page):
 class Consent(Page):   
     @staticmethod
     def before_next_page(player: Player, timeout_happened=False):
-        # TODO: in prolific use https://.../room/your_prolific_study?participant_label={{%PROLIFIC_PID%}}
         player.prolific_id = player.participant.label #save prolific id
 
 class Demographics(MyBasePage):

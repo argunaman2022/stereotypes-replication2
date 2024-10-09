@@ -17,12 +17,12 @@ class C(BaseConstants):
     # Payment infos
     Completion_fee = 1.05 # adjust
     Piece_rate = 0.05 #  Adjust #Average person had solved 16 problems in 2 minutes in a previous experiment. 16*0.03 = 0.5
-    Max_score = 40 #TODO: adjust. 5 boxes and each box has 8 scores -> 5*8 = 40
-    Max_bonus = 2 #TODO: adjust   40 *0.05
-    Max_bonus_beliefs = 2 #TODO: adjust  
+    Max_score = 40 
+    Max_bonus = 2 
+    Max_bonus_beliefs = 2 
             
     # Round length
-    Round_length = 120 #TODO: adjust
+    Round_length = 120 
     Timer_text = "Time left to complete this round:"  
     
     
@@ -30,7 +30,9 @@ class C(BaseConstants):
     Instructions_partII_path = "_templates/global/Instructions_PartII.html"
     Quit_study_text_path = "_templates/global/Quit_study_text.html"
 
-    Return_redirect = "https://www.wikipedia.org/" #TODO:  ADJUST.  redirect
+    Completion_redirect = "https://app.prolific.com/submissions/complete?cc=C1J53ZD8" 
+    Reject_redirect = "https://app.prolific.com/submissions/complete?cc=CSTJBDWB" 
+    Return_redirect = "https://app.prolific.com/submissions/complete?cc=C3ZWW9CZ" 
 
     MathMemory_pic = 'https://raw.githubusercontent.com/argunaman2022/stereotypes-replication2/master/_static/pics/MathMemory_pic.png'
 
@@ -108,7 +110,6 @@ class Round_1_Play(MyBasePage):
     @staticmethod
     def before_next_page(player: Player, timeout_happened):
         player.participant.vars['Score'] = player.Piece_rate 
-        player.participant.vars['Bonus'] = player.Piece_rate * C.Piece_rate
     
 class PartII(MyBasePage):
     extra_fields = []
@@ -117,12 +118,10 @@ class PartII(MyBasePage):
 class FOB(MyBasePage):
     extra_fields = ['FOB_Male_score', 'FOB_Female_score',]
     form_fields = MyBasePage.form_fields + extra_fields
-    #TODO: adjust bonus based on score here
     
 class SOB(MyBasePage):
     extra_fields = ['SOB_Male_score', 'SOB_Female_score',]
     form_fields = MyBasePage.form_fields + extra_fields
-    #TODO: adjust bonus based on score here
     
 
 class Attention_check_2(MyBasePage):         

@@ -9,11 +9,11 @@ class C(BaseConstants):
     PLAYERS_PER_GROUP = None
     NUM_ROUNDS = 1
     
-    # Prolific links, gotten from the study page on prolific
-    Completion_redirect = 'https://www.wikipedia.org/' #TODO:  ADJUST.  redirect
-    Failure_redirect = 'https://www.wikipedia.org/' #TODO:  ADJUST.  redirect
-    Return_redirect = 'https://www.wikipedia.org/' #TODO:  ADJUST.  redirect
-
+     # Prolific links:
+    Completion_redirect = "https://app.prolific.com/submissions/complete?cc=C1J53ZD8" 
+    Reject_redirect = "https://app.prolific.com/submissions/complete?cc=CSTJBDWB" 
+    Return_redirect = "https://app.prolific.com/submissions/complete?cc=C3ZWW9CZ" 
+    
     Instructions_path = "_templates/global/Instructions.html"
     Quit_study_text_path = "_templates/global/Quit_study_text.html"
 
@@ -27,7 +27,7 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    blur_event_counts = models.StringField(initial=0, blank=True) # logs how often user clicked out of the page #TODO:  ADJUST. ensure that this is added to all the pages
+    blur_event_counts = models.StringField(initial=0, blank=True) # logs how often user clicked out of the page 
 
 
 
