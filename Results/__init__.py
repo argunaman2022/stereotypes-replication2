@@ -74,6 +74,7 @@ class Results(Page):
         
         variables['Score'] = player.participant.Score
         variables['Bonus'] = player.participant.Bonus
+        variables['Bonus_message'] = Bonus_message
         return variables
 
 class Failed_screening(MyBasePage):
