@@ -60,6 +60,18 @@ class Results(Page):
     @staticmethod   
     def vars_for_template(player: Player):
         variables = MyBasePage.vars_for_template(player)
+        
+        if player.participant.Payment_relevant_round == '1':
+            Bonus_message = f'''The computer has randomly selected Part I to determine your bonus.
+            In that round you earned {player.participant.Score} points, which has earned you a bonus of ${player.participant.Bonus}. 
+            This bonus will be paid within a week.
+            '''
+        else:
+            payoff_question = player.participant.Payment_relevant_round.split('_')[1]
+            Bonus_message = f'''The computer has randomly selected question {payoff_question} from Part II to determine your bonus.
+            Once the study is compelted, you will be paid your bonus based on how close your answer in that question was to the correct answer.
+            '''
+        
         variables['Score'] = player.participant.Score
         variables['Bonus'] = player.participant.Bonus
         return variables

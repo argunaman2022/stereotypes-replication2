@@ -14,14 +14,14 @@ class C(BaseConstants):
     NUM_ROUNDS = 1
     
     # Payment infos
-    Completion_fee = 1.2 # adjust
-    Piece_rate = 0.03 #  Adjust #Average person had solved 16 problems in 2 minutes in a previous experiment. 16*0.03 = 0.5
-    Max_score = 80 #TODO: adjust. 10 boxes and each box has 8 scores -> 10*8 = 80
-    Max_bonus = 2.4 #TODO: adjust   80 *0.03
-    Max_bonus_beliefs = 1.2 #TODO: adjust  
+    Completion_fee = 1.05 # adjust
+    Piece_rate = 0.05 #  Adjust #Average person had solved 16 problems in 2 minutes in a previous experiment. 16*0.03 = 0.5
+    Max_score = 40 #TODO: adjust. 5 boxes and each box has 8 scores -> 5*8 = 40
+    Max_bonus = 2 #TODO: adjust   40 *0.05
+    Max_bonus_beliefs = 2 #TODO: adjust  
             
     # Round length
-    Round_length = 1200 #TODO: adjust
+    Round_length = 120 #TODO: adjust
     Timer_text = "Time left to complete this round:"  
     
     
@@ -129,20 +129,28 @@ class Attention_check_2(MyBasePage):
     form_fields = MyBasePage.form_fields + extra_fields
     
     @staticmethod
+    def vars_for_template(player: Player):
+        variables = MyBasePage.vars_for_template(player)
+        variables['hidden_fields'].append('Attention_2_question')
+        return variables
+    
+    @staticmethod
     def before_next_page(player: Player, timeout_happened=False):
         if player.Attention_2_question != '1234':
             player.Attention_2 = 0
         else: 
             player.Attention_2 = 1
+        
         if (not player.Attention_2==1 and not player.participant.vars['Attention_1']):
             player.participant.vars['Allowed'] = False
             player.participant.vars['Attention_passed'] = False
 
-    @staticmethod
-    def vars_for_template(player: Player):
-        variables = MyBasePage.vars_for_template(player)
-        variables['hidden_fields'].append('Attention_2_question')
-        return variables
+        if player.participant.Allowed:
+            # flip a coin to determine the payoff relevant round. If 1 then first part, if 2_1 then first question in the second part etc. etc.
+            player.participant.vars['Payment_relevant_round'] = random.choice(['1','2_1', '2_2', '2_3', '2_4',],
+                                                                              p=[0.5, 0.125, 0.125, 0.125, 0.125])
+            if player.participant.vars['Payment_relevant_round'] == '1':
+                player.participant.vars['Bonus'] = player.participant.vars['Score'] * C.Piece_rate
                 
 page_sequence = [
     Round_1_Explanation, Round_1_Play,

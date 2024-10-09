@@ -26,7 +26,7 @@ PARTICIPANT_FIELDS = [
     'Allowed','Comprehension_passed', 'Attention_passed',
     'Covariate_categories', #this is the dictionary of covariates that we stratify over
     'Treatment',
-    'Score', 'Bonus'
+    'Payment_relevant_round', 'Score', 'Bonus'
 ]
 SESSION_FIELDS = {
                     'Male_quotas':{}, 'Female_quotas':{},
