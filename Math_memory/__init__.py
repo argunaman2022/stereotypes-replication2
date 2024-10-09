@@ -1,5 +1,6 @@
 from otree.api import *
 import random
+import numpy as np
 
 doc = '''
 This is the main survey app. It contains
@@ -147,7 +148,7 @@ class Attention_check_2(MyBasePage):
 
         if player.participant.Allowed:
             # flip a coin to determine the payoff relevant round. If 1 then first part, if 2_1 then first question in the second part etc. etc.
-            player.participant.vars['Payment_relevant_round'] = random.choice(['1','2_1', '2_2', '2_3', '2_4',],
+            player.participant.vars['Payment_relevant_round'] = np.random.choice(['1','2_1', '2_2', '2_3', '2_4',],
                                                                               p=[0.5, 0.125, 0.125, 0.125, 0.125])
             if player.participant.vars['Payment_relevant_round'] == '1':
                 player.participant.vars['Bonus'] = player.participant.vars['Score'] * C.Piece_rate
