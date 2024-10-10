@@ -105,7 +105,7 @@ class Failed_attention(MyBasePage):
     @staticmethod
     def js_vars(player):
         return dict(
-            completion_link = C.Failure_redirect
+            completion_link = C.Reject_redirect
         )
 
 page_sequence = [Results, Failed_screening, Failed_attention]
